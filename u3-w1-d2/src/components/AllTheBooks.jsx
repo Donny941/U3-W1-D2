@@ -30,19 +30,19 @@ class AllTheBooks extends Component {
             Romance
           </Button>
           <Button variant="light" className="mx-2" onClick={() => this.setState({ books: Scifi })}>
-            Scifi
+            Sci-fi
           </Button>
         </div>
         <Row xs={2} md={4} lg={6} className="gap-4">
           {this.state.books.map((book) => (
             // <Col>
-            <Card key={book.asin} className=" shadow-lg bg-body-tertiary p-0">
+            <Card key={book.asin} className="scale shadow-lg bg-body-tertiary p-0">
               <Card.Img style={{ height: "250px", objectFit: "cover" }} variant="top" src={book.img} />
               <Card.Body className="d-flex flex-column justify-content-between align-items-start">
                 <Card.Title>{book.title}</Card.Title>
                 <div className="d-flex justify-content-between align-items-center w-100">
                   <Badge pill bg="light" text="dark">
-                    {book.price}
+                    {book.price} $
                   </Badge>
                   <Button variant="primary">Buy Now</Button>
                 </div>
